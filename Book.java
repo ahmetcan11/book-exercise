@@ -23,4 +23,22 @@ class Book
     }
 
     // Add the methods here ...
+   
+    /**
+     * Set the author and title fields when this object
+     * is constructed.
+     */
+    public String getAuthor(){
+        
+        return author;
+   
+    
+    }
+    
+    public String getTitle(){
+        
+        return title;
+   
+    
+    }
 }
