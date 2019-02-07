@@ -3,8 +3,8 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @author (Insert your name here.)
- * @version (Insert today's date here.)
+ * @author Ahmet Can Turk
+ * @version February 7 2019
  */
 class Book
 {
@@ -14,19 +14,22 @@ class Book
     private int pages;
     private String refNumber;
     private int borrowed;
+    boolean courseText;
+   
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
   
-    public Book(String bookAuthor, String bookTitle,int pages, String refNumber, int borrowed)
+    public Book(String bookAuthor, String bookTitle, int pages, boolean course)
     {
-        pages = this.pages;
+        
         author = bookAuthor;
         title = bookTitle;
         refNumber = "";
-        borrowed
+        courseText = course;
+        
     }
 
         // Add the methods here ...
@@ -62,9 +65,9 @@ class Book
     
     }
     
-    public String setRefNumber(String refNumber){
+    public void setRefNumber(String refNumber){
         
-        return refNumber;
+        refNumber = this.refNumber;
    
     
     }
@@ -75,6 +78,17 @@ class Book
         return borrowed;
    
     
+    }
+    
+    public void borrow(){
+    
+    borrowed =+ 1;
+    
+    
+    }
+    public boolean isCourseText(){
+    
+        return courseText;
     }
     public void printDetails(){
         
